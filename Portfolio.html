@@ -9,8 +9,10 @@
   margin: 0;
   font-family: Arial;
 }
+
   .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://onlinedegrees.sandiego.edu/wp-content/uploads/2023/05/6-careers-you-can-get-with-python.jpg");
+  filter: hue-rotate(150deg);
   height: 25%;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,6 +27,7 @@
   transform: translate(-50%, -50%);
   color: #dec1a1;
   text-shadow: 2px 2px #443022;
+  filter: hue-rotate(-150deg);
 }
   .tablink {
   background-color: #f3e9dc;
@@ -39,18 +42,15 @@
 }
   .tablink:hover {
   background-color: #443022;
-  color: inherit
+  color: #f3e9dc
 }
   .tabcontent {
   color: #f3e9dc;
+  font-size: 23px;
   display: none;
   padding: 10px 20px;
   height: 100%;
 }
-	#Home {background-color: #4d3626;}
-	#Old {background-color: #4d3626;}
-	#New {background-color: #4d3626;}
-	#PyTutor {background-color: #4d3626;}
   ul.myUL {
   display: inline-block;
   text-align: center;
@@ -66,7 +66,7 @@
   border: outset thick #443022;
   border-radius: 8px;
   width: 90%;
-  height: 60%;
+  height: 80%;
   overflow-y: scroll;
   overflow-x: auto;
   margin-left: auto;
@@ -112,13 +112,32 @@ body .gist .gist-meta {
 }
 
     </style>
+    <style>
+img {
+  border: 14px outset #5c3b28;
+  padding: 6px;
+  margin: 20px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f3e9dc, #e3d2b8);
 
+box-shadow:
+    inset 0 0 10px rgba(0,0,0,0.25),
+    0 0 0 5px #c9ab8d,
+    0 0 0 10px #5f3e2b,
+    0 10px 25px rgba(0,0,0,0.5);
+}
+p {
+    text-align:justify;
+    margin:0px 20px;
+    text-indent:50px;
+}
+    </style>
 </head>
-	<body style="color:#f3e9dc;background-color:#4d3626;text-align:center;"> <!--Collr is the text color of the Title, bg is the color of the frame-->
+	<body style="background-image: linear-gradient(to bottom, #896043, #332419);text-align:center;background-repeat: no-repeat;background-attachment: fixed;"> <!--Collr is the text color of the Title, bg is the color of the frame-->
 	<div class="hero-image">
-  <div class="hero-text">
-	<h1 style="font-size: 420%;font-family: Georgia, serif;margin-top: 20px;margin-bottom: 10px;">Gilberts Portfolio</h1>
-  </div>
+    <div class="hero-text">
+        <h1 style="font-size:420%;font-family: Georgia, serif;margin-top: 20px;margin-bottom: 10px;">Gilberts Portfolio</h1>
+    </div>
 </div>
 	<button class="tablink" onclick="openPage('Home', this, '#4d3626')" id="defaultOpen">Home</button>
 	<button class="tablink" onclick="openPage('Old', this, '#4d3626')">Cooking Compass</button>
@@ -126,29 +145,31 @@ body .gist .gist-meta {
 	<button class="tablink" onclick="openPage('PyTutor', this, '#4d3626')">PyTutor</button>
 
   <div id="Home" class="tabcontent">
-      <h1>Home</h1>
-	<h2>My Description</h2>
-  <p>I describe myself as a funny person. I like to make jokes because of how I can use it to make others happier. I also like video games. I love Minecraft because I can create so many things and cause some chaos.<br>
-  I also like my dog, Oero. He is turning 2 years old in December. He has some toys that look like oreos because I thought it would be funny.</p>
+  <h1>Home</h1>
+  <p style="text-align:justify;margin:0px 100px;text-indent:50px;">
+      <img class="victorian-frame" src="https://raw.githubusercontent.com/GilbertTorres6250/Extra/refs/heads/main/153D19C5-430E-4D59-BEA6-449518837E0C_Photo.png" alt="" style="width:25%;height:50%;float:right;margin:0px 40px;filter: hue-rotate(0deg);">
+      My name is Gilbert Torres, I learned HTML in my freshman year, and Python in my sophomore year. I have not used HTML since freshmanyear but ive been using Python regularly, so I decided to refresh my skills in HTML with this portfolio as a challenge. I really enjoyed making this HTML portfolio as I not only relearned some HTML concepts but also got to showcase my coding skills in a creative way. As well as with this project I have found new skills for using html to improve my website. For example, I used HTML to create an interactive form on my portfolio where visitors can view the code of my projects. I did this by using a live gist from github and embededing it into my portfolio, after which I learned how to style it to fit my portfolios colors.
+  </p>
   </div>
   <div id="Old" class="tabcontent">
   <h1>Cooking Compass</h1>
+   <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/CookingCompassMain.png?raw=true" alt="" style="width:50%;height:75%;float:right;">
    <p>
-      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/CookingCompassMain.png?raw=true" alt="" style="width:60%;height:45%;float:left;">
-      This project surronds the idea of how i could make it easier for tutors to help kids with any topic by using the database of knowlege from a collective of tutorers' knowlege
-  </p>
-  <p>
-      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/CookingCompassNew.png?raw=true" alt="" style="width:60%;height:45%;float:right;">
-      This project surronds the idea of how i could make it easier for tutors to help kids with any topic by using the database of knowlege from a collective of tutorers' knowlege
+This is my sophomore project for a product that would help myself and others. The general idea was an app that I could use to save my recipes. I used Python with packages like tkinter for the GUI and mysqlite for the database to store recipes. I wanted to display the recipes in a grid similar to Instagram but without the images, so I implemented the use of a scroll wheel. However, after the project I found that it had issues with layering underneath the main title and buttons rather unattractively. Code-wise it was an amazing project that allowed me to stretch beyond just what was taught in class since I taught myself the database schema and functions. The entire project came out to around 400 lines of code, although truth be told a majority of it came from the 160 lines dedicated to the color-changing functions and colorways.
+   </p>
 
+  <p style="float:center;">
+      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/CookingCompassNew.png?raw=true" alt="" style="width:30%;height:15%;float:left;">
+      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/CookingCompassRecipe.png?raw=true" alt="" style="width:30%;height:15%;float:right;">
+      <br>
+The "+" button creates a new window where the user can input their recipes' names, ingredient lists, and instructions. After the user inserts their recipe, the button that says "add" will add the recipe as a button to the grid and save it in the database. In the image on the left you'll see how the new recipe page has a spot for a recipe name and spaces for the ingredients and for the directions. On the right is an example of a recipe for Bag S'mores, with an edit and remove button that allows users to commit changes and to remove recipes.
   </p>
+
   <p>
-      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/CookingCompassRecipe.png?raw=true" alt="" style="width:50%;height:30%;float:left;">
-      This project surronds the idea of how i could make it easier for tutors to help kids with any topic by using the database of knowlege from a collective of tutorers' knowlege
-  </p>
-  <p>
-      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/CookingCompassMenu.png?raw=true" alt="" style="width:50%;height:30%;float:right;">
-      This project surronds the idea of how i could make it easier for tutors to help kids with any topic by using the database of knowlege from a collective of tutorers' knowlege
+      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/CookingCompassMenu.png?raw=true" alt="" style="width:30%;height:15%;float:left;">
+  <br>
+      This is my sophmore project for a product that would help myself and others. The general idea was an app that I could use to save my recipes. I used python with packages like tkinter, for the gui, and mysqlite, for the database to store recipes. I wanted to display the recipes in a grid similar to instagram jut without the images, so I implemented the use of a scroll wheel. However after the project I found that it had issues with layering underneth the main title and buttons rather unattractively. Code wise it was an amazing project that allowed me stretch beyond just what was tought in class since I tought myself the database schema and functions. The entire project came out to around 400 lines of code, although truth be told a majority of it came from the 160 lines dedicated to the color changing functions and colorways.
+
   </p>
   <div class="code-box">
       <script src="https://gist.github.com/GilbertTorres6250/2f3076e54f0ad05c055b863f4c72672a.js"></script>
@@ -158,31 +179,32 @@ body .gist .gist-meta {
   <div id="New" class="tabcontent">
   <h1>Timeless Recipes</h1>
    <p>
-      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/TimelessRecipeMain.png?raw=true" alt="" style="width:60%;height:45%;float:left;">
-      This project surronds the idea of how i could make it easier for tutors to help kids with any topic by using the database of knowlege from a collective of tutorers' knowlege
+      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/TimelessRecipeMain.png?raw=true" alt="" style="width:50%;height:75%;float:left;">
+This is my sophomore project for a product that would help myself and others. The general idea was an app that I could use to save my recipes. I used Python with packages like tkinter for the GUI and mysqlite for the database to store recipes. I wanted to display the recipes in a grid similar to Instagram but without the images, so I implemented the use of a scroll wheel. However, after the project I found that it had issues with layering underneath the main title and buttons rather unattractively. Code-wise it was an amazing project that allowed me to stretch beyond just what was taught in class since I taught myself the database schema and functions. The entire project came out to around 400 lines of code, although truth be told a majority of it came from the 160 lines dedicated to the color-changing functions and.
   </p>
-  <p>
-      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/TimelessRecipeNew.png?raw=true" alt="" style="width:50%;height:30%;float:right;">
-      This project surronds the idea of how i could make it easier for tutors to help kids with any topic by using the database of knowlege from a collective of tutorers' knowlege
+<p>
+      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/TimelessRecipeNew.png?raw=true" alt="" style="width:30%;height:15%;float:left;">
+      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/TimelessRecipeRecipe.png?raw=true" alt="" style="width:30%;height:15%;float:right;">
+<br>
+    The "+" button creates a new window where the user can input their recipes' names, ingredient lists, and instructions. After the user inserts their recipe, the button that says "add" will add the recipe as a button to the grid and save it in the database. In the image on the left you'll see how the new recipe page has a spot for a recipe name and spaces for the ingredients and for the directions. On the right is an example of a recipe for Bag S'mores, with an edit and remove button that allows users to commit changes and to remove recipes.
 
   </p>
   <p>
-      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/TimelessRecipeRecipe.png?raw=true" alt="" style="width:50%;height:30%;float:left;">
       This project surronds the idea of how i could make it easier for tutors to help kids with any topic by using the database of knowlege from a collective of tutorers' knowlege
   </p>
   <p>
-      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/TimelessRecipeSearch.png?raw=true" alt="" style="width:60%;height:45%;float:right;">
+      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/TimelessRecipeSearch.png?raw=true" alt="" style="width:50%;height:75%;float:right;">
       This project surronds the idea of how i could make it easier for tutors to help kids with any topic by using the database of knowlege from a collective of tutorers' knowlege
   </p>
+      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/TimelessRecipeMenu.png?raw=true" alt="" style="width:30%;height:75%;float:left;">
   <p>
-      <img src="https://github.com/GilbertTorres6250/NewCookbook/blob/main/TimelessRecipeMenu.png?raw=true" alt="" style="width:30%;height:10%;float:left;">
       This project surronds the idea of how i could make it easier for tutors to help kids with any topic by using the database of knowlege from a collective of tutorers' knowlege
   </p>
   <div class="code-box">
       <script src="https://gist.github.com/GilbertTorres6250/70cb87d9e12e0410939650d84a6a66d0.js"></script>
   </div>
 </div>
-  <div id="PyTutor" class="tabcontent">
+  <div id="PyTutor" class="tabcontent" style="padding-bottom: 50px;">
   <h1>PyTutor</h1>
    <p>
       <img src="https://github.com/GilbertTorres6250/Pytutor/blob/main/PytutorMain.png?raw=true" alt="" style="width:60%;height:45%;float:left;">
